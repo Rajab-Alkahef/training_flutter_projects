@@ -6,13 +6,16 @@ import 'package:http/http.dart' as http;
 Future<List<ProductModel>> fetchProducts() async {
   const String url = "https://5f210aa9daa42f001666535e.mockapi.io/api/products";
   final response = await http.get(Uri.parse(url));
+  // print(response.body);
   if (response.statusCode == 200) {
-    List<ProductModel> productModel = (json.decode(response.body) as List)
+    List<ProductModel> productModels = (json.decode(response.body) as List)
         .map((data) => ProductModel.fromJson(data))
         .toList();
-
-    return productModel;
+    // print(productModels);
+    return productModels;
   } else {
+    // print(productModel);
+
     throw Exception('Failed to load products');
   }
 }

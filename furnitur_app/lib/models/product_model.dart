@@ -18,12 +18,12 @@ class ProductModel {
         price: json['price'],
         category: json['category'],
         image: json['image'],
-        subtitle: json['subtitle'],
+        subtitle: json['subTitle'],
         description: json['description']);
   }
 }
 
-ProductModel productModel = ProductModel(
+ProductModel productModelDemo = ProductModel(
   id: "1",
   title: "Wood Frame",
   price: 1500,

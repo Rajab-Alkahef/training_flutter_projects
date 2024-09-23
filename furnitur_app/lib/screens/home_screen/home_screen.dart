@@ -17,12 +17,17 @@ class HomeScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      leading: IconButton(
+      leading: Padding(
         padding: EdgeInsets.only(left: SizedConfig.defaultSize * 2),
-        onPressed: () {},
-        icon: SvgPicture.asset(
-          "assets/icons/menu.svg",
-          height: SizedConfig.defaultSize * 2,
+        child: IconButton(
+          // padding: EdgeInsets.only(left: SizedConfig.defaultSize * 2),
+          onPressed: () {},
+          icon: SvgPicture.asset(
+            "assets/icons/menu.svg",
+            fit: BoxFit.fill,
+            height: SizedConfig.defaultSize * 2,
+            // width: SizedConfig.defaultSize * 3,
+          ),
         ),
       ),
       actions: [

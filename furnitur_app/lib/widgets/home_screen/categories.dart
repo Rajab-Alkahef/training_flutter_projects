@@ -17,7 +17,7 @@ class Categories extends StatelessWidget {
             .map((e) => Padding(
                   padding: EdgeInsets.only(right: SizedConfig.defaultSize * 2),
                   child: Hero(
-                      tag: e.id.toString(),
+                      tag: "Category hero ${e.id.toString()}",
                       child: Material(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         borderRadius:
@@ -25,11 +25,13 @@ class Categories extends StatelessWidget {
                         color: Colors.transparent,
                         child: InkWell(
                             onTap: () {
+                              print(e.id.toString());
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => ProductScreen(
-                                    categoryId: e.id,
+                                    categoryId:
+                                        "Category hero ${e.id.toString()}",
                                     categories: e,
                                   ),
                                 ),
