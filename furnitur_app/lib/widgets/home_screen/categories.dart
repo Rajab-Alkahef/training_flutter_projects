@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furnitur_app/models/category_model.dart';
 import 'package:furnitur_app/screens/home_screen/category_screen.dart';
-import 'package:furnitur_app/screens/product_screen.dart';
 import 'package:furnitur_app/size_config.dart';
 import 'package:furnitur_app/widgets/home_screen/categories_card.dart';
 

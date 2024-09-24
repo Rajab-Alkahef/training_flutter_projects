@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furnitur_app/models/product_model.dart';
 import 'package:furnitur_app/size_config.dart';
-import 'package:furnitur_app/widgets/product_screen/product_screen_bod.dart';
+import 'package:furnitur_app/widgets/product_screen/product_screen_body.dart';
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen(

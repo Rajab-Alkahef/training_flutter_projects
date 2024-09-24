@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:furnitur_app/models/product_model.dart';
 import 'package:furnitur_app/services/fetch_products.dart';
 import 'package:furnitur_app/size_config.dart';
 import 'package:furnitur_app/widgets/home_screen/products.dart';
 
 class FutureProducts extends StatelessWidget {
-  const FutureProducts({
+  FutureProducts({
     super.key,
   });
-
+  List<ProductModel> demoList = [productModelDemo, productModelDemo];
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -19,7 +20,9 @@ class FutureProducts extends StatelessWidget {
             );
           } else if (snapshot.hasError) {
             // print(snapshot.data);
-
+            return Products(
+              products: demoList,
+            );
             return Center(
               child: Text(
                 "Error Loading Data",

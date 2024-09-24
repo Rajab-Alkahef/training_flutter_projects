@@ -57,6 +57,16 @@ class ProductsCard extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: 1.125,
                 child: FadeInImage.assetNetwork(
+                    imageErrorBuilder: (context, error, stackTrace) {
+                      return const Center(
+                          child: Column(
+                        children: [
+                          Icon(Icons.error_rounded),
+                          SizedBox(height: 8),
+                          Text("check connection!"),
+                        ],
+                      ));
+                    },
                     placeholderScale: 1.5,
                     placeholder: "assets/spinner.gif",
                     image: productModel.image),

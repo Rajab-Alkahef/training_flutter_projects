@@ -34,7 +34,7 @@ class HomeScreenBody extends StatelessWidget {
               SizedBox(height: SizedConfig.defaultSize * 2),
               const CustomText(title: "Recommands for you"),
               SizedBox(height: SizedConfig.defaultSize * 2),
-              const FutureProducts(),
+              FutureProducts(),
             ],
           ),
         ),
