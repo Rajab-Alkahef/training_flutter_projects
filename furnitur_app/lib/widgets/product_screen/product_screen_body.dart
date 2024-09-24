@@ -18,33 +18,41 @@ class ProductScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double defaultSize = SizedConfig.defaultSize;
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: defaultSize * 1.5),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: defaultSize * 3),
-            Row(
-              children: [
-                MainProductInfo(products: products),
-                Expanded(
-                  child: Hero(
-                    tag: productId,
-                    child: Image.network(
-                      fit: BoxFit.cover,
-                      products.image,
+    return SafeArea(
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: SizedConfig.orientation == Orientation.landscape
+                  ? defaultSize * 4
+                  : defaultSize * 2),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // SizedBox(height: defaultSize * 3),
+              Row(
+                children: [
+                  MainProductInfo(products: products),
+                  Expanded(
+                    child: Hero(
+                      tag: productId,
+                      child: Image.network(
+                        fit: BoxFit.cover,
+                        products.image,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: defaultSize * 3,
-            ),
-            ProductDetails(products: products),
-          ],
+                ],
+              ),
+              SizedBox(
+                height: defaultSize * 3,
+              ),
+              ProductDetails(products: products),
+              SizedBox(
+                height: defaultSize * 3,
+              )
+            ],
+          ),
         ),
       ),
     );

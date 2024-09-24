@@ -25,8 +25,12 @@ class _MainProductInfoState extends State<MainProductInfo> {
   Widget build(BuildContext context) {
     double defaultSize = SizedConfig.defaultSize;
     return SizedBox(
-      height: defaultSize * 37.5,
-      width: defaultSize * 15,
+      height: SizedConfig.orientation == Orientation.landscape
+          ? defaultSize * 23.5
+          : defaultSize * 37.5,
+      width: SizedConfig.orientation == Orientation.landscape
+          ? defaultSize * 45
+          : defaultSize * 15,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,

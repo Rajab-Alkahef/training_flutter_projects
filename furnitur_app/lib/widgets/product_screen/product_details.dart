@@ -47,9 +47,12 @@ class ProductDetails extends StatelessWidget {
               backgroundColor: WidgetStatePropertyAll(kPrimaryColor),
             ),
             onPressed: () {},
-            child: const Text(
+            child: Text(
               "Add to Cart",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: defaultSize * 1.8,
+                  fontWeight: FontWeight.bold),
             ),
           ),
         ),
