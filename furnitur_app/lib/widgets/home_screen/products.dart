@@ -111,7 +111,7 @@ class Products extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => ProductScreen(
-                        categoryId: "Products hero $index",
+                        productId: "Products hero $index",
                         products: products![index],
                       ),
                     ),

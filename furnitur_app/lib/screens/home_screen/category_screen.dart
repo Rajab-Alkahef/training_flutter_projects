@@ -1,28 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:furnitur_app/models/category_model.dart';
 import 'package:furnitur_app/models/product_model.dart';
 import 'package:furnitur_app/size_config.dart';
-import 'package:furnitur_app/widgets/product_screen/product_screen_bod.dart';
 
-class ProductScreen extends StatelessWidget {
-  const ProductScreen(
-      {super.key, required this.productId, required this.products});
+class CategoryScreen extends StatelessWidget {
+  const CategoryScreen({
+    super.key,
+    required this.categoryId,
+    required this.categories,
+  });
+  final CategoryModel categories;
 
-  final ProductModel products;
-
-  final String productId;
+  final String categoryId;
   // String imageNetwork = categories.image ?? products.image;
   @override
   Widget build(BuildContext context) {
     // print(categoryId);
 
     return Scaffold(
-      appBar: productScreenAppBar(context),
-      body: ProductScreenBody(products: products, productId: productId),
+      appBar: categoryScreenAppBar(context),
+      body: Column(
+        children: [
+          SizedBox(
+            height: SizedConfig.defaultSize * 3,
+          ),
+          Row(
+            children: [
+              Hero(
+                tag: categoryId,
+                child: Image.network(categories.image),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
-  AppBar productScreenAppBar(BuildContext context) {
+  AppBar categoryScreenAppBar(BuildContext context) {
     return AppBar(
       leading: Padding(
         padding: EdgeInsets.only(left: SizedConfig.defaultSize * 2),
