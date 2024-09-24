@@ -12,7 +12,7 @@ class ProductScreen extends StatelessWidget {
   // String imageNetwork = categories.image ?? products.image;
   @override
   Widget build(BuildContext context) {
-    print(categoryId);
+    // print(categoryId);
 
     return Scaffold(
         body: Hero(

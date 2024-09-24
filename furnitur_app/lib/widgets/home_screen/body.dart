@@ -16,24 +16,27 @@ class HomeScreenBody extends StatelessWidget {
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.vertical,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: SizedConfig.defaultSize * 2),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: SizedConfig.defaultSize * 2),
-            const CustomText(title: "Browse by Categories"),
-            SizedBox(height: SizedConfig.defaultSize * 2),
-            const FutureCategories(),
-            SizedBox(height: SizedConfig.defaultSize * 2),
-            const Divider(
-              height: 5,
-            ),
-            SizedBox(height: SizedConfig.defaultSize * 2),
-            const CustomText(title: "Recommands for you"),
-            SizedBox(height: SizedConfig.defaultSize * 2),
-            FutureProducts(),
-          ],
+      child: SafeArea(
+        child: Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: SizedConfig.defaultSize * 2),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: SizedConfig.defaultSize * 2),
+              const CustomText(title: "Browse by Categories"),
+              SizedBox(height: SizedConfig.defaultSize * 2),
+              const FutureCategories(),
+              SizedBox(height: SizedConfig.defaultSize * 2),
+              const Divider(
+                height: 5,
+              ),
+              SizedBox(height: SizedConfig.defaultSize * 2),
+              const CustomText(title: "Recommands for you"),
+              SizedBox(height: SizedConfig.defaultSize * 2),
+              const FutureProducts(),
+            ],
+          ),
         ),
       ),
     );

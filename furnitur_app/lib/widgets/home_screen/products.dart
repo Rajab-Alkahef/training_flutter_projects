@@ -86,9 +86,11 @@ class Products extends StatelessWidget {
       // scrollDirection: Axis.horizontal,
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         childAspectRatio: 0.75,
-        crossAxisCount: 2, // number of items in each row
+        crossAxisCount: SizedConfig.orientation == Orientation.portrait
+            ? 2
+            : 4, // number of items in each row
         mainAxisSpacing: 8.0, // spacing between rows
         crossAxisSpacing: 8.0, // spacing between columns
       ),

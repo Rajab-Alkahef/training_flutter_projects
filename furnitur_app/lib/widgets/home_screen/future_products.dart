@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:furnitur_app/models/product_model.dart';
 import 'package:furnitur_app/services/fetch_products.dart';
 import 'package:furnitur_app/size_config.dart';
 import 'package:furnitur_app/widgets/home_screen/products.dart';
 
 class FutureProducts extends StatelessWidget {
-  FutureProducts({
+  const FutureProducts({
     super.key,
   });
-  List<ProductModel>? prod = [productModelDemo, productModelDemo];
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(

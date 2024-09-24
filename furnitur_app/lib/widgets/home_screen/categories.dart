@@ -25,7 +25,7 @@ class Categories extends StatelessWidget {
                         color: Colors.transparent,
                         child: InkWell(
                             onTap: () {
-                              print(e.id.toString());
+                              // print(e.id.toString());
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(

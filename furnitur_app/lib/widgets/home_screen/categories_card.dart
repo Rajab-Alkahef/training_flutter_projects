@@ -56,6 +56,7 @@ class CategoriesCard extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: 1.125,
                 child: FadeInImage.assetNetwork(
+                    placeholderScale: 1.5,
                     placeholder: "assets/spinner.gif",
                     image: categoryModel.image),
               ),
